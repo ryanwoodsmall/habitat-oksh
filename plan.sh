@@ -16,7 +16,7 @@ DO_CHECK=1
 
 do_build() {
   cd "${SRC_PATH}" || exit 1
-  local CFLAGS="-Os -g0 -Wl,-s -Wl,-static -DEMACS"
+  local CFLAGS="-Os -g0 -Wl,-s -Wl,-static"
   ./configure \
     --prefix="${pkg_prefix}" \
     --bindir="${pkg_prefix}/bin" \
@@ -24,9 +24,8 @@ do_build() {
     --cc="$(pkg_path_for core/musl)/bin/musl-gcc"\
     --cflags="${CFLAGS}" \
     --disable-curses \
-    --enable-small \
     --enable-static
-  make LDFLAGS='-s -static' CFLAGS="${CFLAGS}" CPPFLAGS=
+  make LDFLAGS='-s -static' CPPFLAGS=
 }
 
 do_install() {
