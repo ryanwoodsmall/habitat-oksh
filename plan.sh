@@ -32,7 +32,7 @@ do_build() {
 do_install() {
   cd "${SRC_PATH}" || exit 1
   make install
-  ln -s oksh "${pkg_prefix}/bin/ksh"
+  ln -sf oksh "${pkg_prefix}/bin/ksh"
 }
 
 do_check() {
