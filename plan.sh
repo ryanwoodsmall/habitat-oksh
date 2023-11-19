@@ -1,6 +1,6 @@
 pkg_name="oksh"
 pkg_origin="ryanwoodsmall"
-pkg_version="7.3"
+pkg_version="7.4"
 pkg_license=("BSD")
 pkg_maintainer="ryanwoodsmall <rwoodsmall@gmail.com>"
 pkg_description="Portable OpenBSD ksh, based on the Public Domain Korn Shell (pdksh)."
@@ -8,7 +8,7 @@ pkg_upstream_url="https://github.com/ibara/oksh"
 pkg_dirname="${pkg_name}-${pkg_version}"
 pkg_filename="${pkg_dirname}.tar.gz"
 pkg_source="https://github.com/ibara/oksh/releases/download/${pkg_dirname}/${pkg_filename}"
-pkg_shasum="9f176ff6841435a55f27bfd3ebbfc951c8cca6fdf3638f0123f44617e3992f93"
+pkg_shasum="be9a8d457bf373bd04618074c41b46f4edec2ba1c57a58be881d60eaa6628596"
 pkg_build_deps=("core/gcc" "core/musl" "core/file" "core/busybox-static" "core/make")
 pkg_bin_dirs=("bin")
 
